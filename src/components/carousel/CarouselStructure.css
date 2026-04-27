@@ -1,0 +1,64 @@
+/* CarouselStructure.css */
+
+.embla {
+  overflow: hidden;
+  width: 100%; /* Garante que o carrossel use a tela toda */
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.embla__container {
+  display: flex;
+  padding: 20px 0;
+  /* AJUSTE EIXO X: Use space-around ou center para distribuir os itens */
+  justify-content: center; 
+  width: 100%; 
+}
+
+.embla__slide {
+  flex: 0 0 auto; /* Impede que o item seja esmagado */
+  min-width: 120px; 
+  margin: 0 20px; /* Espaço entre cada categoria */
+  cursor: pointer;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ALINHAMENTO INTERNO: Centraliza ícone e texto */
+  text-align: center;
+  gap: 10px;
+}
+
+.icon-box {
+  font-size: 35px; /* Tamanho do emoji */
+  display: block;
+  line-height: 1;
+}
+
+.category-name {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #888;
+  white-space: nowrap; /* Impede o texto de quebrar linha */
+}
+
+/* Quando o item estiver ativo (clicado) */
+.is-active .category-name {
+  color: white;
+}
+
+/* A BARRINHA AMARELA */
+.active-indicator {
+  width: 100%;
+  height: 4px;
+  background-color: #FFBC0D;
+  margin-top: 5px;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.active-indicator.visible {
+  opacity: 1;
+}
