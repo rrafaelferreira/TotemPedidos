@@ -82,3 +82,5 @@ root.render(
     <TotemApp />
   </React.StrictMode>
 );
+
+export default TotemApp;
